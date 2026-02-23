@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookNest | Online Bookshop</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f6f6f6;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:#2c3e50;
+color:white;
+}
+
+nav a{
+margin-left:25px;
+color:white;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+height:50vh;
+background:url("books.jpeg") center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+margin:10px 0;
+}
+
+/* BOOKS */
+
+.books{
+padding:60px 20px;
+text-align:center;
+}
+
+.book-container{
+display:flex;
+gap:25px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.book{
+background:white;
+width:220px;
+border-radius:8px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+overflow:hidden;
+}
+
+.book img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.book h3{
+padding:10px;
+}
+
+.book button{
+margin-bottom:15px;
+padding:8px 15px;
+background:#3498db;
+border:none;
+color:white;
+cursor:pointer;
+}
+
+/* CATEGORIES */
+
+.categories{
+background:#ecf0f1;
+padding:50px 20px;
+text-align:center;
+}
+
+.cat-list{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.cat{
+background:white;
+padding:20px;
+border-radius:6px;
+width:160px;
+}
+
+/* CONTACT */
+
+.contact{
+padding:50px 20px;
+text-align:center;
+}
+
+input{
+padding:10px;
+margin:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#2c3e50;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>BookNest</h2>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Books</a>
+<a href="#">Categories</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+
+<section class="hero">
+<h1>Discover Your Next Book</h1>
+<p>Thousands of books from all genres</p>
+</section>
+
+
+<section class="books">
+
+<h2>Popular Books</h2>
+
+<div class="book-container">
+
+<div class="book">
+<img src="b1.jpg" alt="Book">
+<h3>The Great Adventure</h3>
+<button>Buy</button>
+</div>
+
+<div class="book">
+<img src="b2.jpeg" alt="Book">
+<h3>Learning Web Design</h3>
+<button>Buy</button>
+</div>
+
+<div class="book">
+<img src="b3.jpg" alt="Book">
+<h3>Business Growth</h3>
+<button>Buy</button>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="categories">
+
+<h2>Categories</h2>
+
+<div class="cat-list">
+<div class="cat">Fiction</div>
+<div class="cat">Technology</div>
+<div class="cat">Business</div>
+<div class="cat">Self Development</div>
+</div>
+
+</section>
+
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<input placeholder="Your Name">
+<input placeholder="Email">
+
+</section>
+
+
+<footer>
+© 2026 BookNest Bookshop
+</footer>
+
+</body>
+</html>

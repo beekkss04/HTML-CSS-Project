@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Data Form</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:0;
+}
+
+.container{
+background:white;
+width:420px;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+text-align:center;
+margin-bottom:10px;
+}
+
+.status{
+text-align:center;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.online{
+color:green;
+}
+
+.offline{
+color:red;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+label{
+font-weight:bold;
+font-size:14px;
+}
+
+input, select, textarea{
+padding:10px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px;
+}
+
+textarea{
+resize:none;
+}
+
+button{
+margin-top:10px;
+padding:12px;
+background:#2563eb;
+border:none;
+color:white;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#1e40af;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Employee Form</h1>
+
+<div id="networkStatus" class="status"></div>
+
+<form id="dataForm">
+
+<label>Full Name</label>
+<input type="text" id="name" placeholder="Enter your name" required>
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter email" required>
+
+<label>Phone</label>
+<input type="tel" id="phone" placeholder="Phone number" required>
+
+<label>Department</label>
+<select id="dept">
+<option>IT</option>
+<option>Human Resources</option>
+<option>Finance</option>
+<option>Marketing</option>
+</select>
+
+<label>Employee ID</label>
+<input type="text" id="empid" placeholder="Employee ID">
+
+<label>Notes</label>
+<textarea id="address" rows="3"></textarea>
+
+<button type="submit">Submit Form</button>
+
+</form>
+
+</div>
+
+<script>
+
+/* Network status */
+
+function updateStatus(){
+
+const status = document.getElementById("networkStatus");
+
+if(navigator.onLine){
+status.textContent = "Online ✅";
+status.className = "status online";
+}
+else{
+status.textContent = "Offline ❌ (Data saved locally)";
+status.className = "status offline";
+}
+
+}
+
+window.addEventListener("online", updateStatus);
+window.addEventListener("offline", updateStatus);
+
+updateStatus();
+
+
+
+/* Form handling */
+
+document.getElementById("dataForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const data = {
+name: document.getElementById("name").value,
+email: document.getElementById("email").value,
+phone: document.getElementById("phone").value,
+dept: document.getElementById("dept").value,
+empid: document.getElementById("empid").value,
+address: document.getElementById("address").value
+};
+
+if(navigator.onLine){
+
+alert("You are online. Data ready to send to server.");
+
+}
+else{
+
+let stored = JSON.parse(localStorage.getItem("employeeForms")) || [];
+stored.push(data);
+localStorage.setItem("employeeForms", JSON.stringify(stored));
+
+alert("Offline: Data saved locally.");
+
+}
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>

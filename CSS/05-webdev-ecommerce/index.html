@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEasy | Ecommerce</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f4f4f4;
+}
+
+/* HEADER */
+
+header{
+background:#131921;
+color:white;
+padding:15px 50px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:26px;
+font-weight:bold;
+color:orange;
+}
+
+.search-box{
+display:flex;
+width:40%;
+}
+
+.search-box input{
+flex:1;
+padding:8px;
+border:none;
+}
+
+.search-box button{
+background:orange;
+border:none;
+padding:8px 15px;
+cursor:pointer;
+}
+
+.nav-links a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(to right,#232f3e,#37475a);
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.shop-btn{
+margin-top:20px;
+padding:12px 25px;
+background:orange;
+border:none;
+font-size:16px;
+cursor:pointer;
+}
+
+/* CATEGORIES */
+
+.categories{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:30px;
+background:white;
+flex-wrap:wrap;
+}
+
+.cat{
+background:#eee;
+padding:15px 25px;
+border-radius:6px;
+}
+
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.product-card{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:8px;
+transition:.3s;
+}
+
+.product-card:hover{
+transform:translateY(-5px);
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.product-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.rating{
+color:orange;
+margin:5px 0;
+}
+
+.product-card button{
+margin-top:10px;
+padding:8px 15px;
+background:orange;
+border:none;
+cursor:pointer;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+background:#232f3e;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.newsletter input{
+padding:10px;
+width:250px;
+margin-top:10px;
+}
+
+.newsletter button{
+padding:10px 20px;
+background:orange;
+border:none;
+margin-left:5px;
+}
+
+/* FOOTER */
+
+footer{
+background:#131921;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">ShopEasy</div>
+
+<div class="search-box">
+<input placeholder="Search products...">
+<button>Search</button>
+</div>
+
+<div class="nav-links">
+<a href="#">Account</a>
+<a href="#">Orders</a>
+<a href="#">Cart</a>
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Big Sale is Live</h1>
+<p>Up to 70% off on electronics</p>
+<button class="shop-btn">Shop Now</button>
+
+</section>
+
+
+<section class="categories">
+
+<div class="cat">Electronics</div>
+<div class="cat">Gaming</div>
+<div class="cat">Accessories</div>
+<div class="cat">Smart Gadgets</div>
+
+</section>
+
+
+<section class="products">
+
+<div class="product-card">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBFYhA2swHUuq1Hzyb0LKOrBP_OE3izbq89Q&s" alt="Wireless Headphones">
+
+<h3>Wireless Headphones</h3>
+
+<p class="rating">⭐⭐⭐⭐☆</p>
+
+<p>₹2,999</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="https://t4.ftcdn.net/jpg/06/60/68/37/360_F_660683718_qo0q1V2RuLO56S7cu4VMb078m10U6WW8.jpg" alt="Smart Watch">
+
+<h3>Smart Watch</h3>
+
+<p class="rating">⭐⭐⭐⭐⭐</p>
+
+<p>₹4,499</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="https://www.power-x.in/cdn/shop/files/Front.jpg?v=1737709078&width=3000" alt="Gaming Mouse">
+
+<h3>Gaming Mouse</h3>
+
+<p class="rating">⭐⭐⭐⭐☆</p>
+
+<p>₹1,499</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+
+<div class="product-card">
+
+<img src="https://avstore.in/cdn/shop/products/1.AVStore-Marshall-Acton-III-Top-Front-Hero-Black.jpg?v=1675690233" alt="Bluetooth Speaker">
+
+<h3>Bluetooth Speaker</h3>
+
+<p class="rating">⭐⭐⭐⭐☆</p>
+
+<p>₹3,299</p>
+
+<button>Add to Cart</button>
+
+</div>
+
+</section>
+
+
+<section class="newsletter">
+
+<h2>Subscribe for Deals</h2>
+
+<p>Get special offers directly in your inbox</p>
+
+<input placeholder="Enter email">
+<button>Subscribe</button>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 ShopEasy. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

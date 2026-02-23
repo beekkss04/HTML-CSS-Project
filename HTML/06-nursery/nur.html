@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Garden Nursery</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f1fff4;
+color:#234d20;
+}
+
+/* HEADER */
+
+header{
+background:#2e7d32;
+color:white;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+height:60vh;
+background:url("garden.jpeg") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:50px;
+background:rgba(0,0,0,0.4);
+padding:15px 25px;
+border-radius:6px;
+}
+
+/* ABOUT */
+
+.about{
+padding:60px 10%;
+text-align:center;
+}
+
+/* GALLERY */
+
+.gallery{
+padding:50px 10%;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.grid img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:8px;
+}
+
+/* SERVICES */
+
+.services{
+padding:60px 10%;
+text-align:center;
+background:#e8f5e9;
+}
+
+.cards{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+width:200px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* CONTACT */
+
+.contact{
+padding:60px 10%;
+display:flex;
+gap:40px;
+}
+
+.contact form{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input, textarea{
+padding:10px;
+border:1px solid #ccc;
+}
+
+button{
+background:#2e7d32;
+color:white;
+padding:10px;
+border:none;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#2e7d32;
+color:white;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h2>Green Garden Nursery</h2>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Plants</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+<h1>Fresh Plants & Beautiful Flowers</h1>
+</section>
+
+
+<section class="about">
+
+<h2>About Our Nursery</h2>
+
+<p>
+We provide a wide variety of indoor plants, flowers and garden supplies.
+Our mission is to bring nature closer to your home.
+</p>
+
+</section>
+
+
+<section class="gallery">
+
+<h2>Flower Gallery</h2>
+
+<div class="grid">
+
+<img src="f1.jpeg" alt="Rose flower">
+<img src="f2.jpeg" alt="Sunflower">
+<img src="f3.jpeg" alt="Tulip flower">
+<img src="f4.jpeg" alt="White lily">
+<img src="f5.jpeg" alt="Garden flowers">
+<img src="f6.jpeg" alt="Pink flowers">
+
+</div>
+
+</section>
+
+
+<section class="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">Indoor Plants</div>
+<div class="card">Garden Design</div>
+<div class="card">Plant Care</div>
+<div class="card">Flower Pots</div>
+
+</div>
+
+</section>
+
+
+<section class="contact">
+
+<div>
+<h2>Visit Us</h2>
+<p>Green Garden Nursery</p>
+<p>Mumbai, India</p>
+<p>Phone: +91 9876543210</p>
+</div>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="4" placeholder="Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+
+
+<footer>
+© 2026 Green Garden Nursery
+</footer>
+
+</body>
+</html>

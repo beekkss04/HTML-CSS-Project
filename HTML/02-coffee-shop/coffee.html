@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bean Haven Coffee</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f4f1ee;
+color:#333;
+}
+
+header{
+background:#3e2723;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+.hero{
+background:url("cafe.jpeg");
+background-size:cover;
+background-position:center;
+height:300px;
+display:flex;
+align-items:center;
+justify-content:center;
+color: darkred;
+font-size:35px;
+font-weight:bold;
+}
+
+main{
+padding:40px 20px;
+max-width:900px;
+margin:auto;
+}
+
+section{
+margin-bottom:40px;
+}
+
+.menu{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.menu-item{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.menu-item h3{
+margin-bottom:10px;
+color:#6d4c41;
+}
+
+aside{
+background:#fff3e0;
+padding:20px;
+border-left:5px solid #6d4c41;
+margin:20px;
+}
+
+footer{
+background:#3e2723;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Bean Haven Coffee</h1>
+<p>Fresh Coffee • Cozy Place • Good Vibes</p>
+
+<nav>
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+Welcome to Bean Haven
+</section>
+
+<main>
+
+<section id="about">
+
+<h2>About Our Cafe</h2>
+
+<p>
+Bean Haven Coffee is a cozy café serving freshly brewed coffee,
+delicious snacks and a relaxing atmosphere for everyone.
+</p>
+
+</section>
+
+<section id="menu">
+
+<h2>Our Menu</h2>
+
+<div class="menu">
+
+<article class="menu-item">
+<h3>Espresso</h3>
+<p>Strong coffee shot</p>
+<p>$3</p>
+</article>
+
+<article class="menu-item">
+<h3>Cappuccino</h3>
+<p>Espresso with milk foam</p>
+<p>$4</p>
+</article>
+
+<article class="menu-item">
+<h3>Latte</h3>
+<p>Smooth milk coffee</p>
+<p>$4.5</p>
+</article>
+
+<article class="menu-item">
+<h3>Cold Brew</h3>
+<p>Slow brewed chilled coffee</p>
+<p>$5</p>
+</article>
+
+</div>
+
+</section>
+
+</main>
+
+<aside>
+
+<h3>Special Offer</h3>
+<p>Buy 1 Coffee and get 1 Cookie Free every Friday!</p>
+
+</aside>
+
+<footer id="contact">
+
+<h3>Contact Us</h3>
+
+<p>📍 Mumbai</p>
+<p>📞 +91 9087654321</p>
+<p>⏰ Open Daily 8 AM – 10 PM</p>
+
+</footer>
+
+</body>
+</html>
